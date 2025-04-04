@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Pobeda';
+  font-weight: 700;
+  src: url(../public/fonts/Pobeda-Bold.woff2);
+}
+
+@font-face {
+  font-family: 'Pobeda';
+  font-weight: 400;
+  src: url(../public/fonts/Pobeda-Regular.woff2);
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  min-height: 100dvh;
+  margin: 0;
+  display: flex;
+  font-family: system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  /* font-family: 'Pobeda',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+
+#root {
+  min-height: 100dvh;
+  width: 100%;
+}
