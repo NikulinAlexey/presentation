@@ -11,7 +11,7 @@ const CareerTimeline = () => {
       date: "1 февраля 2024",
       title: "Начало стажировки",
       description:
-        "Приступил к стажировке в СКБТ в качестве разработчика интерфейсов",
+        "Приступил к стажировке в СКБТ в качестве младшего разработчика",
       icon: "👨‍💻",
       highlight: true,
     },
@@ -25,90 +25,70 @@ const CareerTimeline = () => {
     },
     {
       id: 3,
-      date: "15 апреля 2024",
+      date: "12 мая 2024",
       title: "Подключение к проекту SovDobro",
       description:
-        "Приступил к работе на проекте благотворительной платформы SovDobro. Основные задачи: разработка компонентов для платформы на стеке React, Tailwind, Typesctipt и создание / рефакторинг email-рассылок.",
+        "Приступил к работе на проекте благотворительной платформы SovDobro. Основные задачи: разработка компонентов для платформы на стеке React, Tailwind, Typesctipt для последующей передачи фронтенд разработчикам и создание / рефакторинг email-рассылок.",
       icon: "❤️",
       highlight: true,
     },
-    // {
-    //   id: 4,
-    //   date: "Май 2024",
-    //   title: "Разработка UI-Kit для Rocket",
-    //   description:
-    //     "Создание библиотеки компонентов для админ-панели с использованием БЭМ методологии",
-    //   icon: "🧩",
-    // },
-    // {
-    //   id: 5,
-    //   date: "Июнь 2024",
-    //   title: "Освоение новых технологий",
-    //   description:
-    //     "Изучил и применил на практике Tailwind CSS, React и TypeScript",
-    //   icon: "📚",
-    // },
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-6 md:p-12">
+    <div className="relative w-full h-full bg-gradient-to-br from-blue-50 to-white p-8 md:p-12">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-4xl mx-auto"
+      >
+        <div>
+          {/* Вертикальная линия */}
 
-      <div className="relative">
-        {/* Вертикальная линия */}
-        <div className="absolute left-6 md:left-1/2 h-full w-1 bg-blue-200 transform -translate-x-1/2"></div>
-
-        <ul className="space-y-8">
-          {timelineItems.map((item, index) => (
-            <motion.li
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="relative"
-            >
-              <div
-                className={cn(
-                  "flex items-start gap-4 p-4 rounded-lg transition-all cursor-pointer",
-                  {
-                    "bg-blue-50 scale-[1.02]": activeItem === item.id,
-                    "hover:bg-gray-50": activeItem !== item.id,
-                    "ring-2 ring-blue-500": item.highlight,
-                  }
-                )}
-                onClick={() => setActiveItem(item.id)}
+          <ul className="relative space-y-8 before:absolute before:-left-8 before:h-full before:w-1 before:bg-blue-200 before:-translate-x-1/2">
+            {timelineItems.map((item, index) => (
+              <motion.li
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="relative after:absolute after:-left-8 after:w-4 after:h-4 after:rounded-full after:z-10 after:-translate-x-1/2 after:mt-5"
               >
-                {/* Точка на линии */}
                 <div
                   className={cn(
-                    "absolute left-6 md:left-1/2 w-4 h-4 rounded-full z-10 transform -translate-x-1/2 mt-5",
+                    "flex items-start gap-4 p-6 rounded-xl transition-all cursor-pointer bg-white shadow-md ",
                     {
-                      "bg-blue-600 scale-125": activeItem === item.id,
-                      "bg-gray-400": activeItem !== item.id,
-                      "bg-blue-500 border-2 border-white": item.highlight,
+                      "bg-blue-50 scale-[1.02] shadow-lg after:bg-blue-600 after:scale-125":
+                        activeItem === item.id,
+                      "hover:bg-gray-50 after:bg-gray-400":
+                        activeItem !== item.id,
+                      "ring-2 ring-blue-500 after:bg-blue-500 after:border-2 after:border-white":
+                        item.highlight,
                     }
                   )}
-                ></div>
-
-                {/* Иконка */}
-                <div className="text-2xl p-2 bg-white rounded-full shadow-sm">
-                  {item.icon}
-                </div>
-
-                {/* Содержание */}
-                <div className="flex-1">
-                  <div className="text-sm font-medium text-blue-600 mb-1">
-                    {item.date}
+                  onClick={() => setActiveItem(item.id)}
+                >
+                  {/* Иконка */}
+                  <div className="text-2xl p-3 bg-white rounded-full shadow-sm border border-gray-200">
+                    {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">{item.description}</p>
+
+                  {/* Содержание */}
+                  <div className="flex-1">
+                    <div className="text-sm font-medium text-blue-600 mb-1">
+                      {item.date}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            </motion.li>
-          ))}
-        </ul>
-      </div>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+      </motion.div>
     </div>
   );
 };

@@ -43,9 +43,6 @@ const ConclusionSlide = () => {
             Было приятно поделиться своими достижениями и идеями по улучшению
             нашей работы.
           </p>
-          <p className="text-xl text-gray-600">
-            Особые благодарности руководству и коллегам за поддержку!
-          </p>
         </motion.div>
 
         {/* Блок с кнопками */}
@@ -61,25 +58,6 @@ const ConclusionSlide = () => {
           <p className="text-gray-600 mb-6">
             Буду рад обсудить любые аспекты презентации
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 4px 14px rgba(59, 130, 246, 0.2)",
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all"
-            >
-              Задать вопрос
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 border border-blue-500 text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition-all"
-            >
-              Связаться позже
-            </motion.button>
-          </div>
         </motion.div>
 
         {/* Контакты */}
@@ -91,9 +69,13 @@ const ConclusionSlide = () => {
         >
           <p>
             Контакты:{" "}
-            <span className="font-medium text-gray-700">email@example.com</span>{" "}
+            <span className="font-medium text-gray-700">
+              nikulinaa@sovcombank.ru
+            </span>{" "}
             | Телеграм:{" "}
-            <span className="font-medium text-gray-700">@username</span>
+            <span className="font-medium text-gray-700">
+              @nikulin_aleksey_aleksandrovich
+            </span>
           </p>
         </motion.div>
       </motion.div>

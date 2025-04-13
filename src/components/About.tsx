@@ -29,7 +29,7 @@ function About() {
             className="flex items-center"
           >
             <div className="w-12 h-1 bg-blue-500 mr-4"></div>
-            <p className="text-xl text-gray-600">Разработчик</p>
+            <p className="text-xl text-gray-600">Группа разработки веб-интерфейсов</p>
           </motion.div>
         </div>
 
@@ -53,7 +53,7 @@ function About() {
             <div>
               <h3 className="text-sm font-semibold text-gray-500">Должность</h3>
               <p className="text-lg font-medium text-gray-800">
-                Разработчик интерфейсов
+                Разработчик
               </p>
             </div>
           </motion.div>

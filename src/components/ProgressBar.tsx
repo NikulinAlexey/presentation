@@ -25,16 +25,7 @@ const ProgressBar = ({
           borderRadius: progressPercentage === 100 ? "0" : "0 9999px 9999px 0",
         }}
       >
-        {/* Дополнительные эффекты */}
-        <motion.div
-          className="absolute right-0 top-0 h-full w-4 bg-white opacity-30"
-          animate={{ x: ["-100%", "100%"] }}
-          transition={{
-            repeat: Infinity,
-            duration: 1.5,
-            delay: 0.5,
-          }}
-        />
+        
 
         {/* Текст с процентом */}
         {progressPercentage > 30 && (

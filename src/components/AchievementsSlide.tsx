@@ -11,7 +11,7 @@ const AchievementsSlide = () => {
       year: "2024",
       title: "Начало стажировки",
       company: "СКБТ",
-      description: " началась стажировка.",
+      description: "Впервые в it. Началась моя стажировка.",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const AchievementsSlide = () => {
       title: "UI-kit для админки Rocket",
       company: "СКБТ",
       description:
-        "Собирал компоненты для админки рокета с помощью БЭМ: кнопки, элементы ввода, таблицы, модальные окна, аккордеоны.",
+        "Собирал компоненты для админки рокета с помощью методологии БЭМ: кнопки, элементы ввода, таблицы, модальные окна, аккордеоны.",
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ const AchievementsSlide = () => {
       title: "Email-шаблоны",
       company: "СКБТ",
       description:
-        "Научился верстать шаблоны для почтовиков: 1) Welcome-пиьсмо, 2) верстал и рефакторил шаблоны проекта SovDobro, 3)Разобрался в нюансах и сверстал шаблон для дальнейшей конвертации в pdf-формат для выставления счетов на проекте Rocket.",
+        "Научился верстать шаблоны для почтовиков: 1) Welcome-пиьсмо для новых сотрудников, 2) верстал и рефакторил шаблоны проекта SovDobro, 3)Разобрался в нюансах и сверстал шаблон для дальнейшей конвертации в pdf-формат для выставления счетов на проекте Rocket.",
     },
     {
       id: 5,
@@ -95,9 +95,9 @@ const AchievementsSlide = () => {
       "Начало стажировки": "Первый опыт коммерческой разработки",
       "Завершение стажировки": "Успешный переход в штат",
       "UI-kit для админки Rocket": "30+ переиспользуемых компонентов",
-      "Email-шаблоны": "10+ адаптивных шаблонов",
+      "Email-шаблоны": "10+ шаблонов с темной темой",
       Tailwind: "Ускорение верстки в 2 раза",
-      "React JS": "15+ реализованных компонентов",
+      "React JS": "45+ реализованных компонентов",
       TypeScript: "100% типизированных компонентов",
       Docker: "Унификация окружений",
     };
@@ -110,7 +110,7 @@ const AchievementsSlide = () => {
       onClick={() => setAnimated(true)}
     >
       {/* Сетка с элементами timeline */}
-      <div className="grid grid-cols-1 gap-6 flex-grow">
+      <ul className="grid grid-cols-1 gap-6 flex-grow">
         {timelineItems.map((item, index) => (
           <motion.div
             key={item.id}
@@ -121,7 +121,7 @@ const AchievementsSlide = () => {
             whileHover={{ scale: 1.02 }}
             className="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-400"
           >
-            <div className="flex flex-col md:flex-row gap-4">
+            <li className="flex flex-col md:flex-row gap-4">
               {/* Блок с датой */}
               <div className="flex-shrink-0">
                 <div className="bg-blue-100 text-blue-800 rounded-lg py-2 px-4 text-center">
@@ -147,10 +147,10 @@ const AchievementsSlide = () => {
                   {getAchievementDetail(item.title)} {/* Функция для деталей */}
                 </motion.div>
               </div>
-            </div>
+            </li>
           </motion.div>
         ))}
-      </div>
+      </ul>
 
       {/* Футер */}
       <motion.div

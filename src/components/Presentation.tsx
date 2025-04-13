@@ -57,7 +57,7 @@ export const Presentation: React.FC<PresentationProps> = ({ slides }) => {
         <div className="flex gap-x-10 items-center">
           <motion.button
             className={cn(
-              "mr-auto flex items-center font-medium bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white rounded-xl",
+              "mr-auto select-none flex items-center font-medium bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white rounded-xl",
               "shadow-md hover:shadow-lg transition-all duration-300",
               "flex items-center gap-2",
               {
@@ -119,7 +119,7 @@ export const Presentation: React.FC<PresentationProps> = ({ slides }) => {
 
           <motion.button
             className={cn(
-              "ml-auto flex items-center font-medium bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white rounded-xl",
+              "ml-auto select-none flex items-center font-medium bg-blue-600 hover:bg-blue-700 px-6 py-3 text-white rounded-xl",
               "shadow-md hover:shadow-lg transition-all duration-300",
               "flex items-center gap-2",
               {

@@ -16,6 +16,7 @@
 
 html {
   scrollbar-gutter: stable;
+  scrollbar-width: thin;
 }
 
 body {
